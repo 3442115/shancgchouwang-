@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="atcrowfunding05-common-util" />
+        <module name="atcrowfunding02-admin-webyi02" />
+        <module name="atcrowfunding04-admin-entiy" />
+        <module name="atcrowfunding03-admin-component" />
+        <module name="atcrowfunding06-common-reverse" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="atcrowfunding02-admin-webui" target="1.8" />
+      <module name="atcrowfunding02-admin-webui02" target="1.8" />
+      <module name="atcrowfunding02-admin-webui2" target="1.5" />
+      <module name="atcrowfunding06-common-reverse" target="1.8" />
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="atcrowfunding02-admin-webui" options="" />
+      <module name="atcrowfunding03-admin-component" options="" />
+      <module name="atcrowfunding04-admin-entiy" options="" />
+      <module name="atcrowfunding05-common-util" options="" />
+      <module name="atcrowfunding06-common-reverse" options="" />
+      <module name="untitled" options="" />
+    </option>
+  </component>
+</project>
