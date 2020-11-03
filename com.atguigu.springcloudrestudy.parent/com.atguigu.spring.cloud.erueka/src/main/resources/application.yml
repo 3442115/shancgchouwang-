@@ -1,0 +1,13 @@
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false   #自己就不注册到注册中心了
+    fetch-registry: false    # 自己就是注册中心不需要从注册中心拉取信息
+    service-url:
+       defaultZone: http://localhost:5000/eureka
+
+server:
+  port: 5000

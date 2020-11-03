@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.atguigu.mybatisspringboot" />
+        <module name="com.atguigu.reverse" />
+        <module name="com.atguigu.redisspringboot" />
+        <module name="com.atguigu.springcloudrestudy" />
+        <module name="com.atguigu.thymelafspringboot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.atguigu.springbootmybatis" target="1.5" />
+      <module name="com.atguigu.springcloudrestudy" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

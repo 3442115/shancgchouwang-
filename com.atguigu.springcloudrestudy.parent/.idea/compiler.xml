@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.atguigu.springcloud.consumer" />
+        <module name="com.atguigu.spring.cloud.provider2" />
+        <module name="com.atguigu.commons" />
+        <module name="com.atguigu.spring.cloud.erueka" />
+        <module name="com.atguigu.spring.cloud.dashboard" />
+        <module name="com.atguigu.spring.cloud.zuul" />
+        <module name="com.atguigu.spring.cloud.provider" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="com.atguigu.commons" options="-parameters" />
+      <module name="com.atguigu.spring.cloud.dashboard" options="-parameters" />
+      <module name="com.atguigu.spring.cloud.erueka" options="-parameters" />
+      <module name="com.atguigu.spring.cloud.provider" options="-parameters" />
+      <module name="com.atguigu.spring.cloud.provider2" options="-parameters" />
+      <module name="com.atguigu.spring.cloud.zuul" options="-parameters" />
+      <module name="com.atguigu.springcloud.consumer" options="-parameters" />
+    </option>
+  </component>
+</project>

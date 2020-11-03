@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--修改指定的属性值-->
+ <p th:text="经过服务器访问时的值">不经过服务器访访问时</p>
+<input type="text" value="old值" th:value="new的值" />
+<!--在表达式中访问属性域  request、session、applcation-->
+<!--    request域-->
+<p th:text="${modelmap}"></p>
+<!--    session域-->
+<input th:value="${session.asdas}" type="text"/>
+<!--解析url地址   -->
+<p th:text="@{/aaa/bbb/ccc}">@{}作用是吧contextpath的值附加到指定的地址前，默认是空字符串可以在配置文件修改</p>
+<a href="../aa/bb/v.html" th:href="@{/aa/bb/ccc.html}">使用场景举例 </a>
+<!--直接执行表达式   取session中得值没有效果 只能用上面的方法-->
+    <p>ssssssssss</p>
+<p>asd[[${modelmap}]]</p>
+    <p>[[${asdas}]]</p>
+<!--    这是被浏览器解析以后的体现效果 就是在域里面可以添加html表达式，然后在页面接收然后解析  -->
+<!---->
+
+<!-- 分支和遍历-->
+<p th:if="${not #strings.isEmpty(modelmap)}">不为空显示 为空不显示</p>
+~<p th:if="${ #strings.isEmpty(modelmap)}">为空</p>~
+<div>
+<!--    th:each 出现在那 那个语句就出现多次-->
+    <p th:each="str : ${list}" th:text="${str}">
+    </p>
+</div>
+
+<!--  :: 左边的值拼前后缀后必须能够找到要包含的文件  右边的值时代码片段的名字  -->
+<!--    第一个是将代码片段插入到这里面-->
+<div th:insert="~{include/bar :: myfirst}"></div>
+<!--    会把当前代码片段替代为代码片段  -->
+<div th:replace="~{include/bar :: mysecond}"></div>
+<!--  只替换内容  外边一圈东西不变  -->
+<div th:include="~{include/bar :: mythree}"></div>
+</body>
+</html>

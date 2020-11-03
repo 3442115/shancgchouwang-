@@ -1,0 +1,17 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: zuul-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka
+zuul:
+  routes:
+     employee:    # 这个可以自定义
+        service-id: atguigu-consumer
+        path: /simple/**
+  ignored-services: '*'  # 禁止使用微服务的名字进行访问
+  prefix: /maomi   # 在自己的访问地址上 统一添加一个前缀   servlet-context： 在猫咪之前在添加这个值

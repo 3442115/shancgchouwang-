@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.152.1:3306/project_crowd?useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+mybatis:
+  type-aliases-package: "com.atguigu.sbm.entity"
+  mapper-locations: classpath*:mapperxml/*.xml
+
+
+
