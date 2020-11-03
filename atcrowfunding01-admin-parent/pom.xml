@@ -9,12 +9,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-
         <module>atcrowfunding03-admin-component</module>
         <module>atcrowfunding04-admin-entiy</module>
         <module>atcrowfunding05-common-util</module>
         <module>atcrowfunding06-common-reverse</module>
         <module>atcrowfunding02-admin-webyi02</module>
+        <module>pro04-spring-annotion</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -163,20 +163,23 @@
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>5.0.4.RELEASE</version>
             </dependency>
-            <!-- SpringSecurity 配置 -->
+
+            <!-- SpringSecurity配置 -->
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-config</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>5.0.4.RELEASE</version>
             </dependency>
-            <!-- SpringSecurity 标签库 -->
+
+
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-taglibs</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>5.4.0</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

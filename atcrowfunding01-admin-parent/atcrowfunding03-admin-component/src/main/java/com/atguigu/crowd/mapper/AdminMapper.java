@@ -27,4 +27,12 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    List<Admin> selectAdminKeyword(String keyword);
+
+    void deleteOldRelationShip(Integer admin);
+
+  // 如果不写  @param  需要在写动态sql时 指明collection的值为list  如果写上注解就可以写  对应的名字
+    //
+    void saveNewRelationShip(@Param("adminId") Integer adminId,@Param("roleIdList") List<Integer> roleidlist);
 }

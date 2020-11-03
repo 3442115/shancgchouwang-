@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/atcrowfunding02-admin-webui02" />
     <file type="web" url="file://$PROJECT_DIR$/atcrowfunding02-admin-webui2" />
     <file type="web" url="file://$PROJECT_DIR$/atcrowfunding02-admin-webyi02" />
+    <file type="web" url="file://$PROJECT_DIR$/pro04-spring-annotion" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -20,6 +21,11 @@
         <option value="$PROJECT_DIR$/atcrowfunding02-admin-webui02/pom.xml" />
         <option value="$PROJECT_DIR$/atcrowfunding02-admin-webui2/pom.xml" />
         <option value="$PROJECT_DIR$/atcrowfunding06-common-reverse/pom.xml" />
+        <option value="$PROJECT_DIR$/com.atguigu.atcrowdfunding/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/com.atguigu.helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/com.atguigu.newstart/pom.xml" />
+        <option value="$PROJECT_DIR$/pr04-spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/pro04-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
       </set>
     </option>

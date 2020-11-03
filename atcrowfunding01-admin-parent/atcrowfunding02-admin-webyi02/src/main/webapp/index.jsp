@@ -8,56 +8,56 @@
     <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/">
 
     <%--引入jquery--%>
-<%--    老师的出现问题 --%>
+    <%--    --%>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
-
+    <script type="text/javascript" src="layer/layer.js"></script>
 
     <script type="text/javascript">
-     //发送数组 方案一
+        //发送数组 方案一
         $(function() {
             var array = [5, 8, 12];
             var reques = JSON.stringify(array);
-        $("#btn1").click(function () {
-            $.ajax({
-                "url": "send/array/one.html",
-                "type": "post",
-                "data": {
-                   "array": [5,8,12]
-                },
-                "dataType": "text",
-                "success": function (response) {
-                 alert(response);
-                },
-                 "erroe": function (response) {
-                  alert(response);
-                 }
+            $("#btn1").click(function () {
+                $.ajax({
+                    "url": "send/array/one.html",
+                    "type": "post",
+                    "data": {
+                        "array": [5,8,12]
+                    },
+                    "dataType": "text",
+                    "success": function (response) {
+                        alert(response);
+                    },
+                    "erroe": function (response) {
+                        alert(response);
+                    }
 
+                })
             })
-        })
 
-     //发送数组方案二
-        $("#btn2").click(function () {
-            $.ajax({
-                "url": "send/array/two.html",
-                "type": "post",
-                "data": {
-                    "array[0]": 5,
-                    "array[1]": 8,
-                    "array[2]": 12
-                },
-                "dataType": "text",
-                "success": function (response) {
-                    alert(response);
-                },
-                "erroe": function (response) {
-                    alert(response);
-                }
+            //发送数组方案二
+            $("#btn2").click(function () {
+                $.ajax({
+                    "url": "send/array/two.html",
+                    "type": "post",
+                    "data": {
+                        "array[0]": 5,
+                        "array[1]": 8,
+                        "array[2]": 12
+                    },
+                    "dataType": "text",
+                    "success": function (response) {
+                        alert(response);
+                    },
+                    "erroe": function (response) {
+                        alert(response);
+                    }
 
+                })
             })
-        })
 
 
-     //发送数组方案三
+            //发送数组方案三
             $("#btn3").click(function () {
                 $.ajax({
                     "url": "send/array/three.html",
@@ -101,21 +101,24 @@
             var requestBody = JSON.stringify(student);
 
             // 发送Ajax请求
-           $("#btn4").click(function () {
-               $.ajax({
-                   "url": "test/send/object.json",
-                   "type": "post",
-                   "data": requestBody,
-                   "contentType": "application/json;charset=UTF-8",
-                   "dataType": "json",
-                   "success": function (response) {
-                       console.log(response);
-                   },
-                   "error": function (response) {
-                       console.log(response);
-                   }
-               });
-           })
+            $("#btn4").click(function () {
+                $.ajax({
+                    "url": "test/send/object.json",
+                    "type": "post",
+                    "data": requestBody,
+                    "contentType": "application/json;charset=UTF-8",
+                    "dataType": "json",
+                    "success": function (response) {
+                        console.log(response);
+                    },
+                    "error": function (response) {
+                        console.log(response);
+                    }
+                });
+            })
+            $("#btn5").click(function () {
+                layer.msg("layer")
+            })
         })
     </script>
 </head>
@@ -132,5 +135,10 @@
 <br>
 <br>
 <button id="btn4">send Student</button>
+<br>
+<br>
+<button id="btn5">点我</button>
+
+
 </body>
 </html>

@@ -518,7 +518,7 @@ public class AdminExample {
 
     public static class Criteria extends GeneratedCriteria {
 
-        protected Criteria() {
+        public Criteria() {
             super();
         }
     }

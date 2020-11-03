@@ -3,17 +3,21 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keys" content="">
     <meta name="author" content="">
-    <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/"/>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="jquery/jquery-2.1.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/login.css" charset="UTF-8">
+
+    <script src="jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <style>
+
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -25,18 +29,24 @@
 </nav>
 
 <div class="container">
-    <form action="admin/do/login.html" method="post" class="form-signin" role="form">
+
+    <form method="post" action="security/do/login.html" class="form-signin" role="form">
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 管理员登录</h2>
+        <p>${requestScope.exception.message}</p>
+        <p>${SPRING_SECURITY_LAST_EXCEPTION.message}</p>
         <div class="form-group has-success has-feedback">
-            <input name="loginAcct" type="text" class="form-control" placeholder="请输入登录账号" autofocus>
+            <input type="text" class="form-control" name="loginAcct" placeholder="请输入登录账号" autofocus>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-success has-feedback">
-            <input name="userPswd" type="text" class="form-control" placeholder="请输入登录密码" style="margin-top:10px;">
+            <input type="text" class="form-control" name="userPswd"  placeholder="请输入登录密码" style="margin-top:10px;">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
-        <button type="submit" class="btn btn-lg btn-success btn-block" href="main.html"> 登录</button>
+
+        <button type="submit" class="btn btn-lg btn-success btn-block">登录</button>
+
     </form>
 </div>
+
 </body>
 </html>

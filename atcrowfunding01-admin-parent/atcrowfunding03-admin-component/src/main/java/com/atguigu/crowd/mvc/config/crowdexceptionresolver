@@ -1,0 +1,50 @@
+package com.atguigu.crowd.mvc.config;
+
+
+import com.atguigu.crowd.CrowdUtil;
+import com.atguigu.crowd.ResultEntity;
+import com.google.gson.Gson;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+
+//表示当前类是一个基于注解的异常处理类
+@ControllerAdvice
+public class CrowdExceptionResolver {
+
+    //将一个具体的异常类型和方法关联起来
+    @ExceptionHandler(value = NullPointerException.class)
+    public ModelAndView resolverNullpoinException(
+            //异常
+            NullPointerException nullPointerException,
+            //判断是是什么请求
+            HttpServletRequest httpServletRequest,
+            HttpServletResponse httpServletResponse) throws IOException {
+        boolean b = CrowdUtil.judgeRequestAjax(httpServletRequest);
+        //如果是 ajax请求
+        if(b){
+            ResultEntity<Object> failed = ResultEntity.failed(nullPointerException.getMessage());
+            //创建 gson
+            Gson gson=new Gson();
+            //将信息 转换为json字符串
+            String toJson = gson.toJson(failed);
+           //将json 字符串作为响应体传给浏览器
+            httpServletResponse.getWriter().write(toJson);
+          //由于上面  已将将json字符串传给浏览器做了响应，在这就不提供ModelandView对象了  ，
+        return  null;
+        }
+        //如果不是ajax 请求 就创建modelandview
+        ModelAndView modelAndView = new ModelAndView();
+        //将exception存入模型
+        modelAndView.addObject("exception",nullPointerException);
+        //设置试图
+        modelAndView.setViewName("system-error");
+        //返回
+        return null;
+    }
+}
